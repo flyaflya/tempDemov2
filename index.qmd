@@ -1,0 +1,53 @@
+---
+title: "Simple Matplotlib Graph"
+format: html
+execute:
+  echo: true
+---
+
+## Introduction
+
+This document demonstrates a simple matplotlib graph rendered in HTML format. Hi I am Adam.
+
+## Simple Line Plot
+
+```{python}
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Generate sample data
+x = np.linspace(0, 10, 100)
+y = np.sin(x)
+
+# Create the plot
+plt.figure(figsize=(10, 6))
+plt.plot(x, y, 'b-', linewidth=2, label='sin(x)')
+plt.xlabel('X values')
+plt.ylabel('Y values')
+plt.title('Simple Sine Wave Plot')
+plt.grid(True, alpha=0.3)
+plt.legend()
+plt.tight_layout()
+plt.show()
+```
+
+## Bar Chart Example
+
+```{python}
+# Create a simple bar chart
+categories = ['A', 'B', 'C', 'D', 'E']
+values = [23, 45, 56, 78, 32]
+
+plt.figure(figsize=(8, 6))
+plt.bar(categories, values, color=['red', 'green', 'blue', 'orange', 'purple'])
+plt.xlabel('Categories')
+plt.ylabel('Values')
+plt.title('Sample Bar Chart')
+plt.grid(True, alpha=0.3, axis='y')
+plt.tight_layout()
+plt.show()
+```
+
+## Conclusion
+
+These examples show how to create simple matplotlib graphs in a Quarto document that outputs to HTML format.
